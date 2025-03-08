@@ -12,7 +12,7 @@ t = (0, 50);
 
 x(t) = tan(fi)*t;
 
-f(r, p, t) = r/sqrt(17.64)
+f(r, p, t) = r/sqrt(16.64)
 
 prob = ODEProblem(f, r0, theta0)
 
@@ -38,10 +38,10 @@ plot(sol_2.t, sol_2.u, proj=:polar, lims=(0,15), label = "Траектория �
 plot!(ugol, x_lims, proj=:polar, lims=(0, 15), label = "Траекория движения лодки")
 
 
-y(x)=(r0*exp(x/4.2))
+y(x)=(r0*exp(x/sqrt(16.64)))
 
 y(fi + pi)
 
-y2(x)=(r0_2*exp((x/4.2)+(pi/4.2)))
+y2(x)=(r0_2*exp((x/sqrt(16.64))+(pi/sqrt(16.64))))
 
 y2(fi - pi)
